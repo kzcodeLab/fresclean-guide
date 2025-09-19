@@ -1,0 +1,730 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fresclean | エアコン清掃 当日までのご準備ガイド</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="imeges/ファビコン.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="imeges/ファビコン.png">
+  <meta property="og:title" content="fresclean | エアコン清掃 当日までのご準備ガイド">
+  <meta property="og:description" content="エアコン清掃前の準備ポイントをわかりやすくまとめたガイドです。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="imeges/OGP画像.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <style>
+    :root {
+      --brand: #008ed1;
+      --brand-light: #ace3fd;
+      --accent: #3bc2eb;
+      --accent-dark: #2aa6cc;
+      --brand-dark: #00639c;
+      --ink: #1f2a36;
+      --muted: #4f5d6b;
+      --surface: #f4fbff;
+      --card-bg: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+      color: var(--ink);
+      background: var(--surface);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .inner {
+      width: min(1100px, 92vw);
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(6px);
+      background: rgba(245, 249, 252, 0.9);
+      border-bottom: 1px solid rgba(0, 142, 209, 0.1);
+    }
+
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--brand);
+    }
+
+    nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 0.95rem;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: var(--brand);
+    }
+
+    .hero {
+      position: relative;
+      padding: 100px 0 80px;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 10% 20%, rgba(59, 194, 235, 0.2), transparent 55%),
+                  radial-gradient(circle at 80% 30%, rgba(0, 142, 209, 0.18), transparent 60%),
+                  linear-gradient(120deg, rgba(228, 243, 255, 0.9), rgba(255, 255, 255, 0.7));
+      z-index: -1;
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: 2.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      align-items: center;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(0, 142, 209, 0.12);
+      color: var(--brand);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+    }
+
+    .tag::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--brand);
+    }
+
+    h1 {
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      margin: 1.1rem 0 1.2rem;
+      line-height: 1.35;
+    }
+
+    .hero p {
+      color: var(--muted);
+      margin-bottom: 1.8rem;
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      margin-bottom: 0.8rem;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      margin-bottom: 2.6rem;
+      max-width: 670px;
+    }
+
+    .prep-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .prep-card {
+      background: var(--card-bg);
+      padding: 1.8rem;
+      border-radius: 16px;
+      border: 1px solid rgba(0, 142, 209, 0.1);
+      box-shadow: 0 12px 32px rgba(21, 59, 82, 0.07);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .prep-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(140deg, rgba(0, 142, 209, 0.08), transparent 60%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .prep-card:hover::after {
+      opacity: 1;
+    }
+
+    .icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: var(--brand-light);
+      display: grid;
+      place-items: center;
+      box-shadow: inset 0 0 0 1px rgba(0, 142, 209, 0.12);
+      margin: 0 auto;
+    }
+
+    .icon svg {
+      width: 28px;
+      height: 28px;
+      fill: none;
+      stroke: var(--brand);
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .prep-card h3 {
+      font-size: 1.1rem;
+      margin: 0;
+      text-align: center;
+    }
+
+    .prep-card ul {
+      margin: 0;
+      padding-left: 1.1rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .prep-card li + li {
+      margin-top: 0.4rem;
+    }
+
+    .services {
+      background: var(--card-bg);
+    }
+
+    .service-grid {
+      display: grid;
+      gap: 1.6rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .service-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 1.6rem;
+      border: 1px solid rgba(59, 194, 235, 0.18);
+      box-shadow: 0 14px 28px rgba(0, 142, 209, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(0, 142, 209, 0.25);
+      box-shadow: 0 18px 34px rgba(0, 142, 209, 0.12);
+    }
+
+    .service-card h3 {
+      text-align: center;
+    }
+
+    .price {
+      font-weight: 700;
+      color: var(--accent);
+      margin: 0.4rem 0 1rem;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .estimate-note {
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .service-button {
+      margin-top: auto;
+      align-self: center;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.65rem 1.2rem;
+      border-radius: 999px;
+      background: var(--brand);
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 0.92rem;
+      text-decoration: none;
+      box-shadow: 0 16px 32px rgba(0, 142, 209, 0.25);
+      transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .service-button:hover {
+      background: var(--brand-dark);
+      box-shadow: 0 18px 36px rgba(33, 100, 158, 0.28);
+      transform: translateY(-2px);
+    }
+
+    .business-cleaning {
+      margin-top: 3.2rem;
+      padding: clamp(1.8rem, 3vw, 2.6rem);
+      border-radius: 20px;
+      background: var(--card-bg);
+      border: 1px solid rgba(0, 142, 209, 0.2);
+      box-shadow: 0 16px 36px rgba(21, 59, 82, 0.08);
+      text-align: center;
+      display: grid;
+      gap: 1.2rem;
+      justify-items: center;
+    }
+
+    .business-cleaning h3 {
+      margin: 0;
+      font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+    }
+
+    .business-cleaning p {
+      margin: 0;
+      max-width: 640px;
+      color: var(--muted);
+      font-size: 0.97rem;
+    }
+
+    .business-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.9rem 1.9rem;
+      border-radius: 999px;
+      background: var(--brand);
+      color: #ffffff;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 16px 32px rgba(0, 142, 209, 0.25);
+      transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .business-button:hover {
+      background: var(--brand-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 18px 36px rgba(33, 100, 158, 0.28);
+    }
+
+    .facility-list {
+      margin: 1.8rem auto 0;
+      max-width: 720px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem 1rem;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .facility-list span {
+      background: rgba(0, 142, 209, 0.12);
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+    }
+
+    .business-cleaning .facility-list {
+      margin: 0.6rem auto 0;
+    }
+
+    .cta {
+      text-align: center;
+      background: var(--card-bg);
+    }
+
+    .cta p {
+      color: var(--muted);
+      margin: 0.6rem auto;
+      max-width: 620px;
+    }
+
+    .cta-actions {
+      margin: 1.6rem auto 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .line-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.85rem 1.8rem;
+      border-radius: 999px;
+      background: #06c755;
+      color: #ffffff;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 14px 28px rgba(6, 199, 85, 0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .line-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 36px rgba(6, 199, 85, 0.32);
+    }
+
+    .cta-note {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    footer {
+      background: #0f2a3c;
+      color: #ffffff;
+      padding: 40px 0;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 0.2rem 0;
+      font-size: 0.95rem;
+    }
+
+    .footer-info {
+      text-align: left;
+      max-width: 420px;
+      width: 100%;
+    }
+
+    .footer-note {
+      white-space: nowrap;
+    }
+
+    footer .inner {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      align-items: center;
+    }
+
+    @media (max-width: 640px) {
+      header {
+        position: static;
+      }
+
+      .site-header {
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+
+      nav ul {
+        gap: 1rem;
+      }
+
+      section {
+        padding: 50px 0;
+      }
+
+      .service-button,
+      .business-button,
+      .line-button {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .cta-actions {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="inner site-header">
+      <div class="logo">fresclean</div>
+      <nav>
+        <ul>
+          <li><a href="#prepare">ご準備ガイド</a></li>
+          <li><a href="#services">清掃メニュー</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="prepare">
+      <div class="inner hero-grid">
+        <div>
+          <span class="tag">ご訪問前のお願い</span>
+          <h1>作業当日がもっとスムーズに。<br>frescleanの準備ガイド</h1>
+          <p>この度はエアコン清掃をご依頼いただき、ありがとうございます。<br>
+          当日の作業を安全に、スムーズに進めるため、事前のかんたんな準備にご協力ください。<br>
+          心地よい空気をお届けするためのお願いを、わかりやすくまとめました。</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="inner">
+        <h2>事前準備チェックリスト</h2>
+        <p class="section-intro">下記のポイントをご確認いただけると、当日の作業がスムーズに進みます。ご不明点がございましたら、お気軽に担当スタッフまでご相談ください。</p>
+        <div class="prep-grid">
+          <article class="prep-card">
+            <figure class="icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32">
+                <rect x="6" y="12" width="20" height="12" rx="2"></rect>
+                <path d="M10 12V8h12v4"></path>
+                <path d="M8 24l-2 4"></path>
+                <path d="M24 24l2 4"></path>
+              </svg>
+            </figure>
+            <h3>作業スペースの確保</h3>
+            <ul>
+              <li>エアコン周辺の家具や荷物は、1メートルほど離しておいてください。</li>
+              <li>床に養生シートを敷きますので、壊れやすい物や貴重品は事前に移動をお願いします。</li>
+            </ul>
+          </article>
+
+          <article class="prep-card">
+            <figure class="icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32">
+                <path d="M10 4h12v12H10z"></path>
+                <path d="M6 18h20v10H6z"></path>
+                <path d="M12 22h8"></path>
+              </svg>
+            </figure>
+            <h3>電源・水回りの準備</h3>
+            <ul>
+              <li>高圧洗浄機などで使用する電源コンセントをお借りします。</li>
+              <li>洗浄水を流すため、排水口やお風呂場へのアクセス確保をお願いします。</li>
+              <li>安全のため、エアコンの電源とブレーカーを事前にお切りください。</li>
+            </ul>
+          </article>
+
+          <article class="prep-card">
+            <figure class="icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32">
+                <rect x="5" y="10" width="22" height="14" rx="2"></rect>
+                <path d="M8 24v4"></path>
+                <path d="M24 24v4"></path>
+                <path d="M10 10l3-4h6l3 4"></path>
+              </svg>
+            </figure>
+            <h3>駐車場の確保</h3>
+            <ul>
+              <li>作業車（バン・トラック）が停められるスペースをご用意ください。</li>
+              <li>マンションの場合は、管理会社への事前連絡や許可の確認をお願いいたします。</li>
+            </ul>
+          </article>
+
+          <article class="prep-card">
+            <figure class="icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32">
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="20" cy="14" r="3"></circle>
+                <path d="M4 26c1.3-4 4.7-7 8-7s6.7 3 8 7"></path>
+                <path d="M19 26c0.8-2.4 2.6-4.3 5-4.8"></path>
+              </svg>
+            </figure>
+            <h3>ペット・小さなお子様への配慮</h3>
+            <ul>
+              <li>洗剤や機材を使用するため、作業中は別室または外出をおすすめします。</li>
+              <li>アレルギーをお持ちのご家族がいらっしゃる場合も、換気や別室待機にご協力ください。</li>
+            </ul>
+          </article>
+
+          <article class="prep-card">
+            <figure class="icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32">
+                <rect x="9" y="6" width="14" height="20" rx="2"></rect>
+                <path d="M9 12h14"></path>
+                <path d="M12 16h8"></path>
+                <path d="M14 20h4"></path>
+              </svg>
+            </figure>
+            <h3>貴重品の管理</h3>
+            <ul>
+              <li>現金・貴金属・重要書類は安全な場所へ保管してください。</li>
+              <li>作業エリア周辺の壊れやすい装飾品も、一時的に移動をお願いします。</li>
+            </ul>
+          </article>
+
+          <article class="prep-card">
+            <figure class="icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32">
+                <rect x="7" y="8" width="18" height="12" rx="2"></rect>
+                <path d="M10 24h12"></path>
+                <path d="M12 27h8"></path>
+                <path d="M12 12h4"></path>
+              </svg>
+            </figure>
+            <h3>エアコンの情報確認</h3>
+            <ul>
+              <li>エアコンの機種名・年式・購入時期を把握していただけると助かります。</li>
+              <li>保証書や取扱説明書、過去の清掃履歴があればご準備ください。</li>
+            </ul>
+          </article>
+
+          <article class="prep-card">
+            <figure class="icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32">
+                <path d="M6 14h20v12H6z"></path>
+                <path d="M10 8l6-4 6 4"></path>
+                <path d="M12 18h8"></path>
+                <path d="M12 22h6"></path>
+              </svg>
+            </figure>
+            <h3>近隣への配慮</h3>
+            <ul>
+              <li>マンション・アパートの場合は、作業時間帯の周知やご挨拶をご検討ください。</li>
+              <li>通常は9時〜17時の作業となります。大きな音が出る工程もございます。</li>
+            </ul>
+          </article>
+
+          <article class="prep-card">
+            <figure class="icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32">
+                <circle cx="16" cy="12" r="5"></circle>
+                <path d="M6 26c1.6-4.4 5.6-7.5 10-7.5s8.4 3.1 10 7.5"></path>
+                <path d="M20 5l4-2"></path>
+                <path d="M8 5L4 3"></path>
+              </svg>
+            </figure>
+            <h3>立会いの準備</h3>
+            <ul>
+              <li>作業開始から終了まで基本的に立会いをお願いしております。</li>
+              <li>外出のご予定がある場合は、事前に時間調整のご相談をお願いいたします。</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="inner">
+        <h2>その他の清掃メニュー</h2>
+        <p class="section-intro">エアコンクリーニング以外にも、幅広い環境の衛生管理をサポートしています。料金は目安ですので、現地の状況やご要望に応じたお見積りも可能です。</p>
+        <div class="service-grid">
+          <article class="service-card">
+            <h3>ホテル・民泊の室内清掃</h3>
+            <p class="price">1部屋：8,000円～</p>
+            <p>客室全体を丁寧にリセット。清潔で心地よい空間づくりをお任せください。</p>
+            <p class="estimate-note">要お見積り／個別にご案内いたします。</p>
+          </article>
+          <article class="service-card">
+            <h3>車内・シート洗浄</h3>
+            <p class="price">軽自動車：13,000円～</p>
+            <p>シートのしみ・ニオイ対策に。高温スチームと専用洗剤でしっかり洗浄します。</p>
+            <a class="service-button" href="https://www.fresclean.jp/cleaning#a02" target="_blank" rel="noopener">料金はこちらから</a>
+          </article>
+          <article class="service-card">
+            <h3>マットレス洗浄</h3>
+            <p class="price">シングル片面：6,000円～</p>
+            <p>ダニ・カビ対策におすすめ。乾燥まで見届け、すぐにお使いいただけます。</p>
+            <a class="service-button" href="https://www.fresclean.jp/cleaning#a01" target="_blank" rel="noopener">料金はこちらから</a>
+          </article>
+          <article class="service-card">
+            <h3>ソファー洗浄</h3>
+            <p class="price">1人掛けソファ：5,500円/脚</p>
+            <p>ファブリックから本革まで対応。素材に合わせたケアで美しさを取り戻します。</p>
+            <a class="service-button" href="https://www.fresclean.jp/cleaning#a04" target="_blank" rel="noopener">料金はこちらから</a>
+          </article>
+          <article class="service-card">
+            <h3>オフィスチェア洗浄</h3>
+            <p class="price">1脚：2,000円～</p>
+            <p>毎日使うチェアも衛生的に。除菌・消臭までまとめてサポートします。</p>
+            <a class="service-button" href="https://www.fresclean.jp/cleaning#a04" target="_blank" rel="noopener">料金はこちらから</a>
+          </article>
+          <article class="service-card">
+            <h3>カーペット・ラグ洗浄</h3>
+            <p class="price">毛足1cm未満：600円/㎡</p>
+            <p>面積や毛足に合わせて最適な工法を選定。しつこい汚れもご相談ください。</p>
+            <a class="service-button" href="https://www.fresclean.jp/cleaning#a03" target="_blank" rel="noopener">料金はこちらから</a>
+          </article>
+        </div>
+        <div class="business-cleaning">
+          <h3>業務用クリーニングにも対応しています</h3>
+          <p>公共施設から宿泊施設まで、法人・事業所向けの洗浄メニューもお任せください。定期清掃からスポット対応まで柔軟にご提案します。</p>
+          <a class="business-button" href="https://www.fresclean.jp/business" target="_blank" rel="noopener">業務用クリーニングはこちら</a>
+          <div class="facility-list">
+            <span>公共施設</span>
+            <span>病院</span>
+            <span>老人ホーム</span>
+            <span>学校</span>
+            <span>保育園</span>
+            <span>ホテル</span>
+            <span>工場</span>
+            <span>事務所</span>
+            <span>保養所</span>
+            <span>飲食店</span>
+            <span>自動車</span>
+            <span>マンション</span>
+            <span>一戸建住宅</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="inner">
+        <h2>LINEでお気軽にご相談ください</h2>
+        <p>エアコン清掃の詳細から、他の清掃メニューのお見積りまで、お客様の状況に合わせてご提案いたします。</p>
+        <p>日程調整やご不安な点も、チャットでスムーズに確認できます。</p>
+        <div class="cta-actions">
+          <a class="line-button" href="https://lin.ee/XlNXPiz" target="_blank" rel="noopener">LINEで問い合わせる</a>
+        </div>
+        <p class="cta-note">※リンク先はサンプルです。実際のLINE公式アカウントURLに差し替えてご利用ください。</p>
+      </div>
+    </section>
+  </main>
+
+    <footer>
+    <div class="inner">
+      <div class="footer-info">
+        <strong>fresclean　糸満店</strong>
+        <p>住所：〒901-0364 沖縄県糸満市潮崎町3-3-7</p>
+        <p>営業時間：9:00～19:00</p>
+        <p class="footer-note">受付時間や作業エリアなど、お気軽にお問い合わせください。</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
